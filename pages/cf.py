@@ -1,8 +1,8 @@
 import streamlit as st
 from groq import Groq
 
-client = Groq(api_key="YOUR_API_KEY_HERE")
-
+import os
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 st.set_page_config(page_title="Carbon Footprint", page_icon="♻️", layout="wide")
 
 st.title("♻️ Carbon Footprint Checker")
